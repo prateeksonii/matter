@@ -1,32 +1,15 @@
+import { Form } from "remix";
+
 export default function Index() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
-      <h1>Welcome to Remix</h1>
-      <ul>
-        <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/blog"
-            rel="noreferrer"
-          >
-            15m Quickstart Blog Tutorial
-          </a>
-        </li>
-        <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/jokes"
-            rel="noreferrer"
-          >
-            Deep Dive Jokes App Tutorial
-          </a>
-        </li>
-        <li>
-          <a target="_blank" href="https://remix.run/docs" rel="noreferrer">
-            Remix Docs
-          </a>
-        </li>
-      </ul>
+    <div className="h-screen w-screen flex flex-col items-center justify-center">
+      <h1 className="font-black text-6xl">Matter</h1>
+      <p className="mt-2 text-2xl">An easy way to manage your projects</p>
+      <Form action="/auth/auth0" method="post" className="mt-8">
+        <button className="py-2 px-6 text-lg bg-primary rounded font-medium">
+          Get Started
+        </button>
+      </Form>
     </div>
   );
 }
