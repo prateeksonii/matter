@@ -21,9 +21,6 @@ let auth0Strategy = new Auth0Strategy(
   },
   async ({ accessToken, refreshToken, extraParams, profile }) => {
     const { emails, displayName } = profile;
-
-    console.log(profile);
-
     const user = await db.user.upsert({
       where: {
         email: emails[0].value,
@@ -33,6 +30,9 @@ let auth0Strategy = new Auth0Strategy(
         name: displayName,
       },
       update: {},
+      include: {
+        projects: true,
+      },
     });
 
     return user;
