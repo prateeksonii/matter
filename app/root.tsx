@@ -9,7 +9,8 @@ import {
 } from "remix";
 import type { MetaFunction } from "remix";
 
-import styles from "./styles/app.css";
+import appStyles from "./styles/app.css";
+import tailwindStyles from "./styles/tailwind.css";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
@@ -18,7 +19,14 @@ export const meta: MetaFunction = () => ({
 });
 
 export const links: LinksFunction = () => {
-  return [{ rel: "stylesheet", href: styles }];
+  return [
+    {
+      rel: "stylesheet",
+      href: "https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css",
+    },
+    { rel: "stylesheet", href: tailwindStyles },
+    { rel: "stylesheet", href: appStyles },
+  ];
 };
 
 export default function App() {
