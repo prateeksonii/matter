@@ -12,6 +12,9 @@ export default defineConfig({
   ],
   shortcuts: {
     section: "h-[calc(100vh-4rem)]",
+    btn: "border-none text-white px-4 py-2 rounded-md bg-indigo-700 cursor-pointer outline-none",
+    input:
+      "bg-zinc-900 text-white p-2 outline-inset border-none w-full outline-none rd-sm focus-within:(bg-zinc-800)",
   },
   preflights: [
     {

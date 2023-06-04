@@ -28,7 +28,7 @@ export default function Home() {
         {session() ? (
           <A
             href="/dashboard"
-            class="text-lg py-4 px-8 w-max rounded-md mt-4 bg-green-700 decoration-none text-white"
+            class="text-lg py-4 px-8 w-max rounded-md mt-4 bg-indigo-700 decoration-none text-white"
           >
             Go to Dashboard
           </A>
